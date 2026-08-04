@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herchalie Butalid | Portfolio</title>
+  <style>
+    /* 1. CSS VARIABLES & RESETS */
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --border: #334155;
+      --font: system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font);
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    /* 2. LAYOUT & TYPOGRAPHY */
+    .container { max-width: 900px; margin: 0 auto; padding: 4rem 0; }
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.75rem; color: var(--accent); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    h3 { font-size: 1.25rem; font-weight: 600; }
+    p { color: var(--text-muted); margin-bottom: 1rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* 3. BUTTONS */
+    .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent);
+      color: #0f172a;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .btn:hover { background-color: var(--accent-hover); text-decoration: none; }
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background-color: var(--card-bg); }
+
+    /* 4. SECTIONS */
+    section { margin-bottom: 4rem; }
+
+    /* HERO & PROFILE IMAGE */
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap-reverse;
+    }
+    .hero-text { flex: 1; min-width: 280px; }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+    }
+
+    /* EXPERIENCE & EDUCATION CARDS */
+    .timeline-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .timeline-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+    .company { color: var(--accent); font-weight: 500; }
+    .date { font-size: 0.875rem; color: var(--text-muted); }
+    .timeline-item ul { margin-left: 1.25rem; color: var(--text-muted); margin-top: 0.75rem; }
+    .timeline-item li { margin-bottom: 0.5rem; }
+
+    /* FOOTER */
+    footer { text-align: center; color: var(--text-muted); padding: 2rem 0; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'm <span style="color: var(--accent);">Herchalie E. Butalid</span></h1>
+          <p>A passionate Developer / Designer building web applications and digital experiences. Check out my GitHub to explore my open-source projects and code!</p>
+          
+          <div class="btn-group">
+            <!-- GITHUB LINK -->
+            <a href="https://github.com/herchaliebutalid" target="_blank" rel="noopener noreferrer" class="btn">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              View GitHub Profile
+            </a>
+            
+            <!-- RESUME DOWNLOAD LINK -->
+            <a href="resumeeeee.pdf" download="HerchalieButalid_Resume.pdf" class="btn btn-secondary">
+              📄 Download Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- PROFILE PICTURE -->
+        <img src="hehe.png" alt="Herchalie E. Butalid profile picture" class="profile-img" />
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <h2>Work Experience</h2>
+      
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <h3>Job Title / Role</h3>
+          <span class="date">2023 – Present</span>
+        </div>
+        <p class="company">Company Name</p>
+        <ul>
+          <li>Key responsibility or achievement goes here.</li>
+          <li>Built responsive web applications and interfaces.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+      <h2>Education</h2>
+      
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <h3>Degree or Certification</h3>
+          <span class="date">2019 – 2023</span>
+        </div>
+        <p class="company">University or School Name</p>
+        <p style="margin-top: 0.5rem;">Relevant coursework or achievements.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <p>Feel free to reach out if you'd like to work together or just say hi!</p>
+      <div class="btn-group">
+        <!-- DIRECT GMAIL COMPOSER LINK -->
+        <a 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=herchaliebutalid@gmail.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn">
+          Send Email (via Gmail)
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© Herchalie Butalid. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
